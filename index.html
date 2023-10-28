@@ -10,70 +10,71 @@
     <h1>Madden Mobile Boost Calculator</h1>
     <div class="unboosted-team-offense">
         <label for="qb">Quarterback:</label>
-        <input type="number" id="qb" name="qb"><br><br>
+        <input type="number" class="passing-offense" id="qb" name="qb"><br><br>
         <label for="rb">Runningback:</label>
-        <input type="number" id="rb" name="rb"><br><br>
+        <input type="number" class="rushing-offense" id="rb" name="rb"><br><br>
         <label for="fb">Fullback:</label>
-        <input type="number" id="fb" name="fb"><br><br>
+        <input type="number" class="rushing-offense" id="fb" name="fb"><br><br>
         <label for="wr1">Wide Receiver 1:</label>
-        <input type="number" id="wr1" name="wr1"><br><br>
+        <input type="number" class="passing-offense" id="wr1" name="wr1"><br><br>
         <label for="wr2">Wide Receiver 2:</label>
-        <input type="number" id="wr2" name="wr2"><br><br>
+        <input type="number" class="passing-offense"id="wr2" name="wr2"><br><br>
         <label for="te">Tight End:</label>
-        <input type="number" id="te" name="te"><br><br>
+        <input type="number" class="passing-offense" id="te" name="te"><br><br>
         <label for="flex">Flex:</label>
-        <input type="number" id="flex" name="flex"><br><br>
+        <input type="number" class="passing-offense" id="flex" name="flex"><br><br>
         <label for="lt">Left Tackle:</label>
-        <input type="number" id="lt" name="lt"><br><br>
+        <input type="number" class="rushing-offense" id="lt" name="lt"><br><br>
         <label for="lg">Left Guard:</label>
-        <input type="number" id="lg" name="lg"><br><br>
+        <input type="number" class="rushing-offense" id="lg" name="lg"><br><br>
         <label for="c">Center:</label>
-        <input type="number" id="c" name="c"><br><br>
+        <input type="number" class="rushing-offense" id="c" name="c"><br><br>
         <label for="rg">Right Guard:</label>
-        <input type="number" id="rg" name="rg"><br><br>
+        <input type="number" class="rushing-offense" id="rg" name="rg"><br><br>
         <label for="rt">Right Tackle:</label>
-        <input type="number" id="rt" name="rt"><br><br>
+        <input type="number" class="rushing-offense" id="rt" name="rt"><br><br>
     </div>
     <div class="unboosted-team-defense">
         <label for="mlb">Middle Linebacker:</label>
-        <input type="number" id="mlb" name="mlb"><br><br>
+        <input type="number" class="rushing-defense" id="mlb" name="mlb"><br><br>
         <label for="lb">Left Outside Linebacker:</label>
-        <input type="number" id="lb" name="lb"><br><br>
+        <input type="number" class="rushing-defense" id="lb" name="lb"><br><br>
         <label for="rb">Right Outside Linebacker:</label>
-        <input type="number" id="rb" name="rb"><br><br>
+        <input type="number" class="rushing-defense" id="rb" name="rb"><br><br>
         <label for="lb34">3-4 Linebacker:</label>
-        <input type="number" id="lb34" name="lb34"><br><br>
+        <input type="number" class="rushing-defense" id="lb34" name="lb34"><br><br>
         <label for="cb1">Cornerback 1:</label>
-        <input type="number" id="cb1" name="cb1"><br><br>
+        <input type="number" class="passing-defense" id="cb1" name="cb1"><br><br>
         <label for="cb2">Cornerback 2:</label>
-        <input type="number" id="cb2" name="cb2"><br><br>
+        <input type="number" class="passing-defense" id="cb2" name="cb2"><br><br>
         <label for="ss">Strong Safety:</label>
-        <input type="number" id="ss" name="ss"><br><br>
+        <input type="number" class="passing-defense" id="ss" name="ss"><br><br>
         <label for="fs">Free Safety:</label>
-        <input type="number" id="fs" name="fs"><br><br>
+        <input type="number" class="passing-defense" id="fs" name="fs"><br><br>
         <label for="lde">Left Defensive End:</label>
-        <input type="number" id="lde" name="lde"><br><br>
+        <input type="number" class="rushing-defense" id="lde" name="lde"><br><br>
         <label for="rde">Right Defensive End:</label>
-        <input type="number" id="rde" name="rde"><br><br>
+        <input type="number" class="rushing-defense" id="rde" name="rde"><br><br>
         <label for="dt">Defensive Tackle:</label>
-        <input type="number" id="dt" name="dt"><br><br>
+        <input type="number" class="rushing-defense" id="dt" name="dt"><br><br>
         <label for="dt43">4-3 Defensive Tackle:</label>
-        <input type="number" id="dt43" name="dt43"><br><br>
+        <input type="number" class="rushing-defense" id="dt43" name="dt43"><br><br>
         <label for="nb">Nickle:</label>
-        <input type="number" id="nb" name="nb"><br><br>
+        <input type="number" class="passing-defense" id="nb" name="nb"><br><br>
         <label for="db">Dime:</label>
-        <input type="number" id="db" name="db"><br><br>
+        <input type="number" class="passing-defense" id="db" name="db"><br><br>
     </div>
     <div class="unboosted-team-special">
         <label for="k">Kicker:</label>
-        <input type="number" id="k" name="k"><br><br>
+        <input type="number" class="special-teams" id="k" name="k"><br><br>
         <label for="p">Punter:</label>
-        <input type="number" id="p" name="p"><br><br>
+        <input type="number" class="special-teams" id="p" name="p"><br><br>
         <label for="kr">Kick Returner:</label>
-        <input type="number" id="kr" name="kr"><br><br>
+        <input type="number" class="special-teams" id="kr" name="kr"><br><br>
         <label for="pr">Punt Returner:</label>
-        <input type="number" id="pr" name="pr"><br><br>
+        <input type="number" class="special-teams" id="pr" name="pr"><br><br>
     </div>
+    <button class="btn-calculate" onclick="getAllTotals()">Calculate</button>
     <div class="boost-selectors">
         <label for="total-boost">Total Boost:<p><span id="total-boost-display"></span></p></label>
         <input type="range" min="0" max="15" value="0" class="slider" id="total-boost"><br>
@@ -87,6 +88,11 @@
         <input type="range" min="0" max="15" value="0" class="slider" id="passing-defense-boost"><br>
         <label for="special-teams-boost">Special Teams:<p><span id="special-teams-display"></span></p></label>
         <input type="range" min="0" max="15" value="0" class="slider" id="special-teams-boost"><br>
+    </div>
+    <div class="output-section">
+        <p>Boosted Overall: <span id="boosted-overall"></span></p>
+        <p>Coin Cost: <span id="coin-cost"></span></p>
+        <p>Weight Cost: <span id="weight-cost"></span></p>
     </div>
 </body>
 </html>
