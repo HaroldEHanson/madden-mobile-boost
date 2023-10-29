@@ -68,7 +68,7 @@ function calculateBoostedOverall() {
   if (isNaN(dtOverall)) {dtOverall=0;}
   var dtBoostedOverall = (dtOverall * rushingDefenseBoostFactor) + dtOverall;
   var dt43Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#dt43')[0].valueAsNumber;
-  if (isNaN(dt34Overall)) {dt34Overall=0;}
+  if (isNaN(dt43Overall)) {dt43Overall=0;}
   var dt43BoostedOverall = (dt43Overall * rushingDefenseBoostFactor) + dt43Overall;
 
   // Passing Defense
