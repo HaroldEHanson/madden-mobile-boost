@@ -37,10 +37,10 @@
     <div class="unboosted-team-defense">
         <label for="mlb">Middle Linebacker:</label>
         <input type="number" class="rushing-defense" id="mlb" name="mlb"><br><br>
-        <label for="lb">Left Outside Linebacker:</label>
-        <input type="number" class="rushing-defense" id="lb" name="lb"><br><br>
-        <label for="rb">Right Outside Linebacker:</label>
-        <input type="number" class="rushing-defense" id="rb" name="rb"><br><br>
+        <label for="lolb">Left Outside Linebacker:</label>
+        <input type="number" class="rushing-defense" id="lolb" name="lolb"><br><br>
+        <label for="rolb">Right Outside Linebacker:</label>
+        <input type="number" class="rushing-defense" id="rolb" name="rolb"><br><br>
         <label for="lb34">3-4 Linebacker:</label>
         <input type="number" class="rushing-defense" id="lb34" name="lb34"><br><br>
         <label for="cb1">Cornerback 1:</label>
@@ -74,7 +74,7 @@
         <label for="pr">Punt Returner:</label>
         <input type="number" class="special-teams" id="pr" name="pr"><br><br>
     </div>
-    <button class="btn-calculate" onclick="getAllTotals()">Calculate</button>
+    <button class="btn-calculate" onclick="calculateBoostedOverall()">Calculate</button>
     <div class="boost-selectors">
         <label for="total-boost">Total Boost:<p><span id="total-boost-display"></span></p></label>
         <input type="range" min="0" max="15" value="0" class="slider" id="total-boost"><br>

@@ -1,9 +1,3 @@
-const passingOffenseInputs = document.querySelectorAll('.unboosted-team-offense input[type="number"].passing-offense');
-const rushingOffenseInputs = document.querySelectorAll('.unboosted-team-offense input[type="number"].rushing-offense');
-const rushingDefenseInputs = document.querySelectorAll('.unboosted-team-defense input[type="number"].rushing-defense');
-const passingDefenseInputs = document.querySelectorAll('.unboosted-team-defense input[type="number"].passing-defense');
-const specialTeamsInputs = document.querySelectorAll('.unboosted-team-special input[type="number"].special-teams');
-
 function calculateBoostedOverall() {
   var passingOffenseBoostFactor = document.querySelectorAll('.boost-selectors #passing-offense-boost')[0].valueAsNumber/100;
   var rushingOffenseBoostFactor = document.querySelectorAll('.boost-selectors #rushing-offense-boost')[0].valueAsNumber/100;
@@ -23,75 +17,74 @@ function calculateBoostedOverall() {
   var flexOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#flex')[0].valueAsNumber;
   var flexBoostedOverall = (flexOverall * passingOffenseBoostFactor) + flexOverall;
 
-  // TODO: Other positions
+  // Rushing Offense
+  var rbOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#rb')[0].valueAsNumber;
+  var rbBoostedOverall = (rbOverall * rushingOffenseBoostFactor) + rbOverall;
+  var fbOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#fb')[0].valueAsNumber;
+  var fbBoostedOverall = (fbOverall * rushingOffenseBoostFactor) + fbOverall;
+  var ltOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#lt')[0].valueAsNumber;
+  var ltBoostedOverall = (ltOverall * rushingOffenseBoostFactor) + ltOverall;
+  var lgOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#lg')[0].valueAsNumber;
+  var lgBoostedOverall = (lgOverall * rushingOffenseBoostFactor) + lgOverall;
+  var cOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#c')[0].valueAsNumber;
+  var cBoostedOverall = (cOverall * rushingOffenseBoostFactor) + cOverall;
+  var rgOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#rg')[0].valueAsNumber;
+  var rgBoostedOverall = (rgOverall * rushingOffenseBoostFactor) + rgOverall;
+  var rtOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#rt')[0].valueAsNumber;
+  var rtBoostedOverall = (rtOverall * rushingOffenseBoostFactor) + rtOverall;
+  
+  // Rushing Defense
+  var mlbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#mlb')[0].valueAsNumber;
+  var mlbBoostedOverall = (mlbOverall * rushingDefenseBoostFactor) + mlbOverall;
+  var lolbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#lolb')[0].valueAsNumber;
+  var lolbBoostedOverall = (lolbOverall * rushingDefenseBoostFactor) + lolbOverall;
+  var rolbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#rolb')[0].valueAsNumber;
+  var rolbBoostedOverall = (rolbOverall * rushingDefenseBoostFactor) + rolbOverall;
+  var lb34Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#lb34')[0].valueAsNumber;
+  var lb34BoostedOverall = (lb34Overall * rushingDefenseBoostFactor) + lb34Overall;
+  var ldeOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#lde')[0].valueAsNumber;
+  var ldeBoostedOverall = (ldeOverall * rushingDefenseBoostFactor) + ldeOverall;
+  var rdeOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#rde')[0].valueAsNumber;
+  var rdeBoostedOverall = (rdeOverall * rushingDefenseBoostFactor) + rdeOverall;
+  var dtOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#dt')[0].valueAsNumber;
+  var dtBoostedOverall = (dtOverall * rushingDefenseBoostFactor) + dtOverall;
+  var dt43Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#dt43')[0].valueAsNumber;
+  var dt43BoostedOverall = (dt43Overall * rushingDefenseBoostFactor) + dt43Overall;
+
+  // Passing Defense
+  var cb1Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#cb1')[0].valueAsNumber;
+  var cb1BoostedOverall = (cb1Overall * passingDefenseBoostFactor) + cb1Overall;
+  var cb2Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#cb2')[0].valueAsNumber;
+  var cb2BoostedOverall = (cb2Overall * passingDefenseBoostFactor) + cb2Overall;
+  var fsOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#fs')[0].valueAsNumber;
+  var fsBoostedOverall = (fsOverall * passingDefenseBoostFactor) + fsOverall;
+  var ssOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#ss')[0].valueAsNumber;
+  var ssBoostedOverall = (ssOverall * passingDefenseBoostFactor) + ssOverall;
+  var nbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#nb')[0].valueAsNumber;
+  var nbBoostedOverall = (nbOverall * passingDefenseBoostFactor) + nbOverall;
+  var dbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#db')[0].valueAsNumber;
+  var dbBoostedOverall = (dbOverall * passingDefenseBoostFactor) + dbOverall;
+
+  // Special Teams
+  var kOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#k')[0].valueAsNumber;
+  var kBoostedOverall = (kOverall * specialTeamsBoostFactor) + kOverall;
+  var krOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#kr')[0].valueAsNumber;
+  var krBoostedOverall = (krOverall * specialTeamsBoostFactor) + krOverall;
+  var pOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#p')[0].valueAsNumber;
+  var pBoostedOverall = (pOverall * specialTeamsBoostFactor) + pOverall;
+  var prOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#pr')[0].valueAsNumber;
+  var prBoostedOverall = (prOverall * specialTeamsBoostFactor) + prOverall;
 
   var passingOffenseBoostedOverall = qbBoostedOverall+wr1BoostedOverall+wr2BoostedOverall+teBoostedOverall+flexBoostedOverall;
+  var rushingOffenseBoostedOverall = rbBoostedOverall+fbBoostedOverall+ltBoostedOverall+lgBoostedOverall+cBoostedOverall+rgBoostedOverall+rtBoostedOverall;
+  var rushingDefenseBoostedOverall = mlbBoostedOverall+lolbBoostedOverall+rolbBoostedOverall+lb34BoostedOverall+ldeBoostedOverall+rdeBoostedOverall+dt43BoostedOverall+dtBoostedOverall;
+  var passingDefenseBoostedOverall = cb1BoostedOverall+cb2BoostedOverall+fsBoostedOverall+ssBoostedOverall+nbBoostedOverall+dbBoostedOverall;
+  var specialTeamsBoostedOverall = kBoostedOverall+krBoostedOverall+pBoostedOverall+prBoostedOverall;
 
-  var boostedOverall = passingOffenseBoostedOverall;
+  var boostedOverall = passingOffenseBoostedOverall+rushingOffenseBoostedOverall+rushingDefenseBoostedOverall+passingDefenseBoostedOverall+specialTeamsBoostedOverall;
+  console.log(boostedOverall);
 
   return boostedOverall;
-}
-
-function calculatePassingOffenseTotal() {
-  let total = 0;
-  passingOffenseInputs.forEach(input => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-          total += value;
-      }
-  });
-  console.log(total);
-} 
-
-function calculateRushingOffenseTotal() {
-  let total = 0;
-  rushingOffenseInputs.forEach(input => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-          total += value;
-      }
-  });
-  console.log(total);
-} 
-function calculateRushingDefenseTotal() {
-  let total = 0;
-  rushingDefenseInputs.forEach(input => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-          total += value;
-      }
-  });
-  console.log(total);
-} 
-
-function calculatePassingDefenseTotal() {
-  let total = 0;
-  passingDefenseInputs.forEach(input => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-          total += value;
-      }
-  });
-  console.log(total);
-} 
-
-function calculateSpecialTeamsTotal() {
-  let total = 0;
-  specialTeamsInputs.forEach(input => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-          total += value;
-      }
-  });
-  console.log(total);
-} 
-
-function getAllTotals() {
-  calculatePassingOffenseTotal();
-  calculatePassingDefenseTotal();
-  calculateRushingOffenseTotal();
-  calculateRushingDefenseTotal();
-  calculateSpecialTeamsTotal();
 }
 
 // Get the main slider element
