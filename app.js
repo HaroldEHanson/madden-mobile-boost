@@ -307,58 +307,58 @@ function calculateWeightCost() {
   }
 
   // Passing Defense
-  var passingDefenseCoins = [0,
-    2260,
-    4980,
-    8830,
-    13580,
-    19240,
-    25810,
-    33280,
-    41650,
-    50940,
-    63390,
-    101640,
-    138600,
-    204200,
-    310460,
-    485100];
+  var passingDefenseWeights = [0,
+    90,
+    200,
+    350,
+    540,
+    770,
+    1030,
+    1330,
+    1670,
+    2040,
+    2540,
+    4070,
+    5540,
+    8170,
+    12420,
+    19400];
   var passingDefenseCost = 0;
-  for (var i = 0; i < passingDefenseCoins.length; i++) {
+  for (var i = 0; i < passingDefenseWeights.length; i++) {
     if (passingDefenseBoostFactor === i) {
-      passingDefenseCost = passingDefenseCoins[i];
+      passingDefenseCost = passingDefenseWeights[i];
       break;
     }
   }
 
   // Special Teams
-  var specialTeamsCoins = [0,
-    1280,
-    2820,
-    5000,
-    7700,
-    10900,
-    14620,
-    18860,
-    23600,
-    28860,
-    35920,
-    57600,
-    78540,
-    115720,
-    175930,
-    274890];
+  var specialTeamsWeights = [0,
+    50,
+    110,
+    200,
+    310,
+    440,
+    580,
+    750,
+    940,
+    1150,
+    1440,
+    2300,
+    3140,
+    4630,
+    7040,
+    11000];
   var specialTeamsCost = 0;
-  for (var i = 0; i < specialTeamsCoins.length; i++) {
+  for (var i = 0; i < specialTeamsWeights.length; i++) {
     if (specialTeamsBoostFactor === i) {
-      specialTeamsCost = specialTeamsCoins[i];
+      specialTeamsCost = specialTeamsWeights[i];
       break;
     }
   }
 
-  totalCoinCost = passingOffenseCost+rushingOffenseCost+rushingDefenseCost+passingDefenseCost+specialTeamsCost;
-  console.log(totalCoinCost);
-  return totalCoinCost;
+  totalWeightCost = passingOffenseCost+rushingOffenseCost+rushingDefenseCost+passingDefenseCost+specialTeamsCost;
+  console.log(totalWeightCost);
+  return totalWeightCost;
 }
 
 // Get the main slider element
