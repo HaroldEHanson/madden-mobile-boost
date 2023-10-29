@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <h1>Madden Mobile Boost Calculator</h1>
+    <div class="disclaimer">
+        <h2 style="color:yellow">Instructions</h2>
+        <p>
+        <p>
+            Enter the overall of each of your team's players into their respective sections below.
+        </p>
+        <p>
+            After each position has been entered, select the boost level you would like to see.
+            If you want to do a single boost level for every position group, use the "total boost"
+            slider. Otherwise move each individual slider to the desired level.
+        </p>
+        <p>
+            Once your players have
+            been entered and you've chosen your boost levels, you can then press the "Calculate" button to 
+            view your estimated boosted overall, as well as the amount of coins and weights it will cost.
+        </p>
+        <h2 style="color:yellow">Disclaimer</h2>
+        <p>This app is still in development, and as such there are a few bugs I should mention.</p>
+        <p>
+            First off,
+            weight room boosts only apply to a player's base overall. That is to say that if a player has been 
+            leveled up at all, the boosted overall provided by this app will be overestimated. If possible,
+            when entering your players' overall, use their base overall (level 0) to the exact decimal point value.
+            The weight and coin cost are uneffected by this and should be perfectly accurate.
+        </p> 
+        <p>
+            I'm currently working
+            on developing a complete database of all of the players in the game so that rather than entering an
+            overall, you should be able to just select the exact card which in turn will allow a perfectly accurate
+            boost calculator.
+        </p>
+    </div>
     <div class="unboosted-team-offense">
         <label for="qb">Quarterback:</label>
         <input type="number" class="passing-offense" id="qb" name="qb">
@@ -90,9 +123,9 @@
         <input type="range" min="0" max="15" value="0" class="slider" id="special-teams-boost"><br>
     </div>
     <div class="output-section">
-        <p>Boosted Overall: <span id="boosted-overall-display"></span></p>
-        <p>Coin Cost: <span id="coin-cost-display"></span></p>
-        <p>Weight Cost: <span id="weight-cost-display"></span></p>
+        <h2>Boosted Overall: <span id="boosted-overall-display"></span></h2>
+        <h2>Coin Cost: <span id="coin-cost-display"></span></h2>
+        <h2>Weight Cost: <span id="weight-cost-display"></span></h2>
     </div>
 </body>
 </html>

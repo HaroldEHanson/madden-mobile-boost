@@ -1,0 +1,78 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #BB86FC;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1F1F1F;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #E0E0E0;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #03DAC6;
+    border: none;
+    border-radius: 5px;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #00C4B4;
+}
+
+/* Sliders */
+.slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Output Section */
+.output-section p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    body {
+        padding: 0 20%;
+    }
+}
+
+/* Additional Styles */
+.unboosted-team-offense, 
+.unboosted-team-defense, 
+.unboosted-team-special, 
+.boost-selectors,
+.disclaimer {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #1F1F1F;
+    margin: 20px 0;
+}
