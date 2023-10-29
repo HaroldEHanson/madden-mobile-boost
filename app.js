@@ -361,6 +361,19 @@ function calculateWeightCost() {
   return totalWeightCost;
 }
 
+function displayOutput() {
+  var boostedOverall = calculateBoostedOverall();
+  if (isNaN(boostedOverall)) {boostedOverall=0;}
+  var coinCost = calculateCoinCost();
+  var weightCost = calculateWeightCost();
+  const overallDisplay = document.getElementById('boosted-overall-display');
+  const coinDisplay = document.getElementById('coin-cost-display');
+  const weightDisplay = document.getElementById('weight-cost-display');
+  overallDisplay.textContent = boostedOverall;
+  coinDisplay.textContent = coinCost;
+  weightDisplay.textContent = weightCost;
+}
+
 // Get the main slider element
 const mainSlider = document.getElementById('total-boost');
   

@@ -11,8 +11,6 @@
     <div class="unboosted-team-offense">
         <label for="qb">Quarterback:</label>
         <input type="number" class="passing-offense" id="qb" name="qb">
-        <label for="qbLvl">Level:</label>
-        <input type="number" min="0" max="10" id="qbLvl" name="qbLvl"><br><br>
         <label for="rb">Runningback:</label>
         <input type="number" class="rushing-offense" id="rb" name="rb"><br><br>
         <label for="fb">Fullback:</label>
@@ -76,7 +74,7 @@
         <label for="pr">Punt Returner:</label>
         <input type="number" class="special-teams" id="pr" name="pr"><br><br>
     </div>
-    <button class="btn-calculate" onclick="calculateBoostedOverall(); calculateCoinCost(); calculateWeightCost()">Calculate</button>
+    <button class="btn-calculate" onclick="displayOutput()">Calculate</button>
     <div class="boost-selectors">
         <label for="total-boost">Total Boost:<p><span id="total-boost-display"></span></p></label>
         <input type="range" min="0" max="15" value="0" class="slider" id="total-boost"><br>
@@ -92,9 +90,9 @@
         <input type="range" min="0" max="15" value="0" class="slider" id="special-teams-boost"><br>
     </div>
     <div class="output-section">
-        <p>Boosted Overall: <span id="boosted-overall"></span></p>
-        <p>Coin Cost: <span id="coin-cost"></span></p>
-        <p>Weight Cost: <span id="weight-cost"></span></p>
+        <p>Boosted Overall: <span id="boosted-overall-display"></span></p>
+        <p>Coin Cost: <span id="coin-cost-display"></span></p>
+        <p>Weight Cost: <span id="weight-cost-display"></span></p>
     </div>
 </body>
 </html>
