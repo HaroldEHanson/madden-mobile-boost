@@ -87,6 +87,107 @@ function calculateBoostedOverall() {
   return boostedOverall;
 }
 
+function calculateCoinCost() {
+  var passingOffenseBoostFactor = document.querySelectorAll('.boost-selectors #passing-offense-boost')[0].valueAsNumber;
+  var rushingOffenseBoostFactor = document.querySelectorAll('.boost-selectors #rushing-offense-boost')[0].valueAsNumber;
+  var passingDefenseBoostFactor = document.querySelectorAll('.boost-selectors #passing-defense-boost')[0].valueAsNumber;
+  var rushingDefenseBoostFactor = document.querySelectorAll('.boost-selectors #rushing-defense-boost')[0].valueAsNumber;
+  var specialTeamsBoostFactor = document.querySelectorAll('.boost-selectors #special-teams-boost')[0].valueAsNumber;
+
+  // Passing Offense
+  var passingOffenseCoins = [0,
+                            1890,
+                            4150,
+                            7360,
+                            11320,
+                            16040,
+                            21510,
+                            27730,
+                            34710,
+                            42450,
+                            52820,
+                            84700,
+                            115500,
+                            170170,
+                            258720,
+                            404250];
+  var passingOffenseCost = 0;
+  for (var i = 0; i < passingOffenseCoins.length; i++) {
+    if (passingOffenseBoostFactor === i) {
+      passingOffenseCost = passingOffenseCoins[i];
+      break;
+    }
+  }
+
+  // Rushing Offense
+  var rushingOffense1 = 2640;
+  var rushingOffense2 = 5810;
+  var rushingOffense3 = 10300;
+  var rushingOffense4 = 15850;
+  var rushingOffense5 = 22450;
+  var rushingOffense6 = 30110;
+  var rushingOffense7 = 38820;
+  var rushingOffense8 = 48600;
+  var rushingOffense9 = 59420;
+  var rushingOffense10 = 73950;
+  var rushingOffense11 = 118580;
+  var rushingOffense12 = 161700;
+  var rushingOffense13 = 238240;
+  var rushingOffense14 = 362210;
+  var rushingOffense15 = 565950;
+
+  // Rushing Defense
+  var rushingDefense1 = 3020;
+  var rushingDefense2 = 6640;
+  var rushingDefense3 = 11770;
+  var rushingDefense4 = 18110;
+  var rushingDefense5 = 25660;
+  var rushingDefense6 = 34410;
+  var rushingDefense7 = 44370;
+  var rushingDefense8 = 55540;
+  var rushingDefense9 = 67910;
+  var rushingDefense10 = 84520;
+  var rushingDefense11 = 135520;
+  var rushingDefense12 = 184800;
+  var rushingDefense13 = 272270;
+  var rushingDefense14 = 413950;
+  var rushingDefense15 = 646800;
+
+  // Passing Defense
+  var passingDefense1 = 2260;
+  var passingDefense2 = 4980;
+  var passingDefense3 = 8830;
+  var passingDefense4 = 13580;
+  var passingDefense5 = 19240;
+  var passingDefense6 = 25810;
+  var passingDefense7 = 33280;
+  var passingDefense8 = 41650;
+  var passingDefense9 = 50940;
+  var passingDefense10 = 63390;
+  var passingDefense11 = 101640;
+  var passingDefense12 = 138600;
+  var passingDefense13 = 204200;
+  var passingDefense14 = 310460;
+  var passingDefense15 = 485100;
+
+  // Special Teams
+  var specialTeams1 = 1280;
+  var specialTeams2 = 2820;
+  var specialTeams3 = 5000;
+  var specialTeams4 = 7700;
+  var specialTeams5 = 10900;
+  var specialTeams6 = 14620;
+  var specialTeams7 = 18860;
+  var specialTeams8 = 23600;
+  var specialTeams9 = 28860;
+  var specialTeams10 = 35920;
+  var specialTeams11 = 57600;
+  var specialTeams12 = 78540;
+  var specialTeams13 = 115720;
+  var specialTeams14 = 175930;
+  var specialTeams15 = 274890;
+}
+
 // Get the main slider element
 const mainSlider = document.getElementById('total-boost');
   
