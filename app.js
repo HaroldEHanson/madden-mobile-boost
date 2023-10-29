@@ -7,72 +7,102 @@ function calculateBoostedOverall() {
 
   // Passing Offense
   var qbOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#qb')[0].valueAsNumber;
+  if (isNaN(qbOverall)) {qbOverall=0;}
   var qbBoostedOverall = (qbOverall * passingOffenseBoostFactor) + qbOverall;
   var wr1Overall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#wr1')[0].valueAsNumber;
+  if (isNaN(wr1Overall)) {wr1Overall=0;}
   var wr1BoostedOverall = (wr1Overall * passingOffenseBoostFactor) + wr1Overall;
   var wr2Overall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#wr2')[0].valueAsNumber;
+  if (isNaN(wr2Overall)) {wr2Overall=0;}
   var wr2BoostedOverall = (wr2Overall * passingOffenseBoostFactor) + wr2Overall;
   var teOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#te')[0].valueAsNumber;
+  if (isNaN(teOverall)) {teOverall=0;}
   var teBoostedOverall = (teOverall * passingOffenseBoostFactor) + teOverall;
   var flexOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#flex')[0].valueAsNumber;
+  if (isNaN(flexOverall)) {flexOverall=0;}
   var flexBoostedOverall = (flexOverall * passingOffenseBoostFactor) + flexOverall;
 
   // Rushing Offense
   var rbOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#rb')[0].valueAsNumber;
+  if (isNaN(rbOverall)) {rbOverall=0;}
   var rbBoostedOverall = (rbOverall * rushingOffenseBoostFactor) + rbOverall;
   var fbOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#fb')[0].valueAsNumber;
+  if (isNaN(fbOverall)) {fbOverall=0;}
   var fbBoostedOverall = (fbOverall * rushingOffenseBoostFactor) + fbOverall;
   var ltOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#lt')[0].valueAsNumber;
+  if (isNaN(ltOverall)) {ltOverall=0;}
   var ltBoostedOverall = (ltOverall * rushingOffenseBoostFactor) + ltOverall;
   var lgOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#lg')[0].valueAsNumber;
+  if (isNaN(lgOverall)) {lgOverall=0;}
   var lgBoostedOverall = (lgOverall * rushingOffenseBoostFactor) + lgOverall;
   var cOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#c')[0].valueAsNumber;
+  if (isNaN(cOverall)) {cOverall=0;}
   var cBoostedOverall = (cOverall * rushingOffenseBoostFactor) + cOverall;
   var rgOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#rg')[0].valueAsNumber;
+  if (isNaN(rgOverall)) {rgOverall=0;}
   var rgBoostedOverall = (rgOverall * rushingOffenseBoostFactor) + rgOverall;
   var rtOverall = document.querySelectorAll('.unboosted-team-offense input[type="number"]#rt')[0].valueAsNumber;
+  if (isNaN(rtOverall)) {rtOverall=0;}
   var rtBoostedOverall = (rtOverall * rushingOffenseBoostFactor) + rtOverall;
   
   // Rushing Defense
   var mlbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#mlb')[0].valueAsNumber;
+  if (isNaN(mlbOverall)) {mlbOverall=0;}
   var mlbBoostedOverall = (mlbOverall * rushingDefenseBoostFactor) + mlbOverall;
   var lolbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#lolb')[0].valueAsNumber;
+  if (isNaN(lolbOverall)) {lolbOverall=0;}
   var lolbBoostedOverall = (lolbOverall * rushingDefenseBoostFactor) + lolbOverall;
   var rolbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#rolb')[0].valueAsNumber;
+  if (isNaN(rolbOverall)) {rolbOverall=0;}
   var rolbBoostedOverall = (rolbOverall * rushingDefenseBoostFactor) + rolbOverall;
   var lb34Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#lb34')[0].valueAsNumber;
+  if (isNaN(lb34Overall)) {lb34Overall=0;}
   var lb34BoostedOverall = (lb34Overall * rushingDefenseBoostFactor) + lb34Overall;
   var ldeOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#lde')[0].valueAsNumber;
+  if (isNaN(ldeOverall)) {ldeOverall=0;}
   var ldeBoostedOverall = (ldeOverall * rushingDefenseBoostFactor) + ldeOverall;
   var rdeOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#rde')[0].valueAsNumber;
+  if (isNaN(rdeOverall)) {rdeOverall=0;}
   var rdeBoostedOverall = (rdeOverall * rushingDefenseBoostFactor) + rdeOverall;
   var dtOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#dt')[0].valueAsNumber;
+  if (isNaN(dtOverall)) {dtOverall=0;}
   var dtBoostedOverall = (dtOverall * rushingDefenseBoostFactor) + dtOverall;
   var dt43Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#dt43')[0].valueAsNumber;
+  if (isNaN(dt34Overall)) {dt34Overall=0;}
   var dt43BoostedOverall = (dt43Overall * rushingDefenseBoostFactor) + dt43Overall;
 
   // Passing Defense
   var cb1Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#cb1')[0].valueAsNumber;
+  if (isNaN(cb1Overall)) {cb1Overall=0;}
   var cb1BoostedOverall = (cb1Overall * passingDefenseBoostFactor) + cb1Overall;
   var cb2Overall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#cb2')[0].valueAsNumber;
+  if (isNaN(cb2Overall)) {cb2Overall=0;}
   var cb2BoostedOverall = (cb2Overall * passingDefenseBoostFactor) + cb2Overall;
   var fsOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#fs')[0].valueAsNumber;
+  if (isNaN(fsOverall)) {fsOverall=0;}
   var fsBoostedOverall = (fsOverall * passingDefenseBoostFactor) + fsOverall;
   var ssOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#ss')[0].valueAsNumber;
+  if (isNaN(ssOverall)) {ssOverall=0;}
   var ssBoostedOverall = (ssOverall * passingDefenseBoostFactor) + ssOverall;
   var nbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#nb')[0].valueAsNumber;
+  if (isNaN(nbOverall)) {nbOverall=0;}
   var nbBoostedOverall = (nbOverall * passingDefenseBoostFactor) + nbOverall;
   var dbOverall = document.querySelectorAll('.unboosted-team-defense input[type="number"]#db')[0].valueAsNumber;
+  if (isNaN(dbOverall)) {dbOverall=0;}
   var dbBoostedOverall = (dbOverall * passingDefenseBoostFactor) + dbOverall;
 
   // Special Teams
   var kOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#k')[0].valueAsNumber;
+  if (isNaN(kOverall)) {kOverall=0;}
   var kBoostedOverall = (kOverall * specialTeamsBoostFactor) + kOverall;
   var krOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#kr')[0].valueAsNumber;
+  if (isNaN(krOverall)) {krOverall=0;}
   var krBoostedOverall = (krOverall * specialTeamsBoostFactor) + krOverall;
   var pOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#p')[0].valueAsNumber;
+  if (isNaN(pOverall)) {pOverall=0;}
   var pBoostedOverall = (pOverall * specialTeamsBoostFactor) + pOverall;
   var prOverall = document.querySelectorAll('.unboosted-team-special input[type="number"]#pr')[0].valueAsNumber;
+  if (isNaN(prOverall)) {prOverall=0;}
   var prBoostedOverall = (prOverall * specialTeamsBoostFactor) + prOverall;
 
   var passingOffenseBoostedOverall = qbBoostedOverall+wr1BoostedOverall+wr2BoostedOverall+teBoostedOverall+flexBoostedOverall;
