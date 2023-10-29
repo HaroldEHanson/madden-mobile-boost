@@ -114,7 +114,8 @@ function calculateBoostedOverall() {
   var boostedOverall = passingOffenseBoostedOverall+rushingOffenseBoostedOverall+rushingDefenseBoostedOverall+passingDefenseBoostedOverall+specialTeamsBoostedOverall;
   console.log(boostedOverall);
 
-  return boostedOverall;
+
+  return Math.round(boostedOverall);
 }
 
 function calculateCoinCost() {
